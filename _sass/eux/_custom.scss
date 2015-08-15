@@ -204,7 +204,7 @@ main > footer {
 		background-repeat: no-repeat;
 		background-position: right center;	
 		&.hero {
-			@include breakpoint ($screen-sm) {
+			@media (min-width: $screen-sm) {
 				margin-bottom: 1em;
 			}
 			
@@ -309,7 +309,7 @@ main > footer {
 			padding-right: $padding-base-horizontal/2;
 		}
 	}
-	@include breakpoint ($screen-md) {
+	@media (min-width: $screen-md) {
 		//margin-bottom: 122px;
 		&:after {
 			position: absolute;
@@ -335,7 +335,7 @@ main > footer {
 body{
 	.tool-bar-wrapper {
 		padding: 4px;
-		@include breakpoint ($screen-md) {
+		@media (min-width: $screen-md) {
 			margin-top: 11px;
 		}
 		h1 {
@@ -518,12 +518,12 @@ body{
 }
 .icon-block {
 	height: 75px;
-	@include breakpoint ($screen-sm) {
+	@media (min-width: $screen-sm) {
 		height: 144px
 	}
 	svg {
 		height: 75px;
-		@include breakpoint ($screen-sm) {
+		@media (min-width: $screen-sm) {
 			height: 144px
 		}
 		width: auto;	
@@ -669,7 +669,7 @@ body.rd {
 	.navbar-default {
 		
 		background: $green_dark;
-		@include breakpoint ($screen-md) {
+		@media (min-width: $screen-md) {
 			&:after {
 				background-image: url("/assets/svg/bg.08.svg");
 			}
@@ -684,11 +684,6 @@ body.rd {
 
 				}
 			}
-		}
-	}
-	.navbar-nav:last-child {
-		@include breakpoint($screen-md) {
-			//background: $black;
 		}
 	}
 	.bg {
@@ -707,57 +702,4 @@ body.rd {
 	}
 
 }
-// ####################################################################################################
-//
-// TYPED
-//
-// ####################################################################################################
-.typed-cursor{
-    opacity: 1;
-    -webkit-animation: blink 0.7s infinite;
-    -moz-animation: blink 0.7s infinite;
-    animation: blink 0.7s infinite;
-}
-// ####################################################################################################
-//
-// ANIMATIONS
-//
-// ####################################################################################################
-@keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-webkit-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@-moz-keyframes blink{
-    0% { opacity:1; }
-    50% { opacity:0; }
-    100% { opacity:1; }
-}
-@include keyframes(pulse) {
-	0% {
-		background-color: $green_dark !important;		
-	}
-	5% {
-		background-color: darken($green_dark, 5%) !important;	
-	}
-	10% {
-		background-color: darken($green_dark, 15%) !important;		
-	}
-	15% {
-		background-color: darken($green_dark, 5%) !important;	
-	}
-	20% {
-		background-color: darken($green_dark, 15%) !important;		
-	}
-	25% {
-		background-color: $green_dark !important;		
-	}
-	100% {
-		background-color: $green_dark !important;		
-	}
-}
+
