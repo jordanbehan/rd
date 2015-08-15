@@ -1,0 +1,763 @@
+.animated {
+	@include animation-delay(1s);	
+}
+
+// ####################################################################################################
+//
+// layout
+//
+// @media (max-width: $screen-md) {} @include breakpoint ($screen-md) {}
+
+// ####################################################################################################
+body {
+	background: $black;	
+}
+
+main {
+	position: relative;
+	width: 100%;
+	//max-width: 1400px;
+	background: #fff;
+	margin: 0 auto;
+}
+article {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	img {
+		max-width: 100%;
+		width: 100%;	
+	}	
+	background: url("/assets/svg/skyline.01.svg") repeat-x bottom center;
+	background-size: 1800px;
+	padding-bottom: $spacer*5;
+	.truck {
+		position: absolute;
+		z-index: 99;
+		bottom: 0;
+		left: 10%;
+		width: 120px;
+		height: 46px;	
+	}
+	.trees {
+		position: absolute;
+		z-index: 98;
+		bottom: 2em;
+		left: -40%;
+		width: 1800px;
+		height: 100px;	
+	}
+	.clouds {
+		position: absolute;
+		z-index: 98;
+		bottom: 95px;
+		left: -10%;
+		width: 1800px;
+		height: 100px;	
+	}
+}
+section {
+	position: relative;
+	padding: 1em 0 3em;
+
+}
+
+.nav {
+	@extend %ui-basic;
+}
+main > footer, section.feature {
+	position: relative;
+	background: #00adf3;
+	background-size: 50%;
+	color: #fff !important;
+	overflow: hidden;
+	padding-top: 7em !important;
+	font-weight: 600;
+	h1, h2, h3, h4, h5, h6, p {
+		a {
+			color: $brand-info;	
+		}
+	}
+}
+section.feature {
+	padding-top: 8em !important;
+	padding-bottom: 6em !important;
+	margin-bottom: 2em;
+	hr {
+		border-color: #fff;
+		border-style: dotted;	
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		background: url("/assets/svg/bg.01.svg") no-repeat center top;
+		background-size: 200%;
+		display: block;
+		bottom: -20px;
+		left: -40%;
+		width: 150%;
+		height: 120px;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		background: #fff url("/assets/svg/bg.05.svg") no-repeat 50% -5%;
+		background-size: 110%;
+		display: block;
+		top: -15px;
+		left: -5%;
+		width: 110%;
+		height: 100px;
+	}
+}
+main > footer {
+	position: relative;
+	z-index: 2;
+	margin-top: 0.5em;
+	padding-top: 4em !important;
+	background: $black url("/assets/images/bg.05.jpg") no-repeat center center;
+	background-size: cover;
+	font-weight: 600;
+	a:not([class*="btn"]) {
+		color: $green;
+	}
+	ul {
+		
+		li {
+			border-bottom: 1px dotted $green_dark;
+			a {
+				display: block;	
+				padding: $spacer/4 0;
+			}	
+			&:last-child {
+				border: none;	
+			}
+		}	
+		
+	}
+	.container {
+		position: relative;
+		z-index: 1;	
+	}
+	&:after {
+		@extend %full-coverage;
+		content: "";
+		background: rgba(#000, 0.75);
+		z-index: 0;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		z-index: 3;
+		//background: url("/assets/svg/bg.02.svg") no-repeat left top;
+		background-size: 200%;
+		display: block;
+		top: -2px;
+		left: 0;
+		width: 100%;
+		height: 10px;
+	}
+	@media (max-width: $screen-md) {
+		background: $black;
+		//text-align: center;
+		padding-top: 1em !important;
+		h5 {
+			margin-top: $spacer;
+			a img {
+				max-width: 220px;	
+			}	
+		}
+		.nav {
+			li {
+				width: 49%;
+				float: left;
+				display: inline;
+				border-bottom: 1px solid rgba($green, 0.4);
+				
+				a {
+					text-align: left !important;
+					display: block;
+					
+				}
+				&:nth-child(2n) {
+					border-left-color: transparent;
+					margin-left: 2%;
+					
+				}
+				&:last-child, &:nth-last-child(2) {
+					border-bottom-color: transparent;
+				}
+			}	
+		}	
+	}
+}
+.bg {
+	@extend %full-coverage;
+	z-index: 0;	
+	overflow: hidden;
+	&.header {
+		position: relative;
+		margin-bottom: -0.5em;
+		height: 360px; 
+		background-size: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: right center;	
+		&.hero {
+			@include breakpoint ($screen-sm) {
+				margin-bottom: 1em;
+			}
+			
+			height: 540px; 
+			background-position: right top;
+			.wrapper {
+				position: absolute;
+				z-index: 2;
+				top: 8em;	
+				left: 0;
+				right: 0;
+				width: 100%;
+				h1, h2 {
+					color: #fff;
+				}
+				@media (max-width: $screen-xs) {
+					top: 2em;
+				}
+			}
+			.hero-img {
+				position: absolute;
+				//z-index: 9999;
+				width: 50%;
+				min-width: 700px;
+				max-width: 800px;
+				bottom: 0;
+				right: 5%;	
+				@media (max-width: $screen-md) {
+					right: -250px;	
+				}
+				@media (max-width: $screen-xs) {
+					right: -400px;
+					
+				}
+				@include animation-delay(1s);
+				&:nth-child(2) {
+					@include animation-delay(1.5s);
+				}
+			}
+			&:before {
+				
+				background: url("/assets/svg/bg.07.svg") no-repeat 50% 520px;
+				background-size: 105%;
+				bottom: -1px;
+				top: 0;
+				height: 100%;
+			
+			}
+		}
+		&:before {
+				@media (min-width: $screen-sm) {
+					content: "";
+				}
+				position: absolute;
+				z-index: 99999;
+				background: url("/assets/svg/bg.07.svg") no-repeat 50% 260px;
+				background-size: 105%;
+				display: block;
+				bottom: -1px;
+				top: 90px;
+				left: 0;
+				width: 100%;
+				height: 360px;
+		}
+	}
+}
+// ####################################################################################################
+//
+// bootstrap
+//
+// ####################################################################################################
+
+.navbar-default {
+	min-height: 144px !important;
+	border: 0px;
+	z-index: 999;
+	padding: 20px $navbar-padding-horizontal 0 0;
+	width: auto;
+	@media (max-width: $screen-md) {
+		min-height: 65px !important;
+		padding: 12px 12px 12px 12px;
+		.container {
+			max-width: 100%;	
+			width: 100%;
+		}
+		.navbar-brand {
+			padding: 0;
+			> img {
+				display: block;
+				width: 180px !important;
+				margin-top: 4px;
+			}
+		}
+	}
+	.msg {
+		font-size: em(18px);
+		font-weight: 700;
+		text-transform: uppercase;	
+		color: #fff;
+		padding-right: $padding-base-horizontal;
+		@media (max-width: $screen-md) {
+			padding-right: $padding-base-horizontal/2;
+		}
+	}
+	@include breakpoint ($screen-md) {
+		//margin-bottom: 122px;
+		&:after {
+			position: absolute;
+			z-index: -1;
+			top: 100%;
+			width: 100%;
+			height: 122px;
+			content: "";
+			background: url("/assets/svg/bg.03.svg") no-repeat 50% 105%;
+			background-size: 110%;
+			overflow: hidden;
+		}
+	}
+	
+}
+.navbar-nav {
+	color: #fff;
+	margin-top: 30px;
+	@media (max-width: $screen-md) {
+		margin-top: 60px;
+	}
+}
+body{
+	.tool-bar-wrapper {
+		padding: 4px;
+		@include breakpoint ($screen-md) {
+			margin-top: 11px;
+		}
+		h1 {
+			position: relative;
+			font-size: em(29px);
+			font-weight: 700;
+			text-transform: uppercase;
+			margin: 0px 0 0 0px;
+			padding: 10px 0 0 0px;
+			color: $black;
+			a {
+				//text-decoration: underline !important;
+				color: $black;
+			}
+			&.phone {
+				svg {
+					fill: $black;
+					height: 38px;
+					position: absolute;
+					left: 12px;	
+					top: 3px;
+				}	
+			}
+		}
+		@media (max-width: $screen-md) {
+			background: $green_dark;
+			padding: 4px 4px 4px 12px;
+			display: block;
+			margin-left: 0 !important;
+			* a, h1 a {
+				color: #fff;	
+			}	
+		}
+	}
+	.tool-bar {
+		background: $green;
+		padding: 4px;
+		border-radius: 2px;
+		float: right !important;
+		position: relative;
+		z-index: 999;
+		.location {
+			font-size: 18px;
+			position: absolute;
+			top: 7px;
+			left: -100%;
+			//right: $padding-base-horizontal;	
+			width: auto;
+			color: $green;
+			* {
+				color: #fff !important;	
+			}
+		}
+		.btn {
+			//background: $green_dark;	
+			&.btn-warning {
+					background: transparent;
+					padding-left: 44px;
+					span {
+						position: absolute;
+						left: 8px;
+						top: 0;
+						text-transform: none !important;
+							
+					}
+			}
+			&.btn-primary {
+				background-color: $green_dark !important;
+				//@include animation(pulse 2s infinite ease-in-out);
+			}
+		}
+	}	
+}
+.btn {
+	font-size: 14px !important;
+	line-height: 20px;
+	text-transform: uppercase;	
+	font-weight: 700;
+	border-color: transparent !important;
+	text-decoration: none !important;
+	padding-top: 15px;
+}
+.breadcrumb {
+	position: relative;
+	z-index: 999;
+	@extend %ui-basic;
+	font-size: 12px;
+	padding: 10px 0 0 !important;
+	a {
+		color: $green !important;	
+	}
+	li {
+		&:before {
+			content: "u";
+			font-family: "PantonIcons-DLight";
+			padding: 0 6px;
+			text-transform: lowercase;
+		}	
+		&:first-child {
+			margin-left: 0;
+			&:before {
+				content: "";
+				padding: 0;	
+			}	
+		}
+	}
+}	
+.panel {
+	margin: 1px 0 0 0 !important;
+	border: none !important;
+	
+	h6 a {
+		position: relative;
+		color: #fff !important;
+		display: block;
+		&:after {
+			position: absolute;
+			right: 0px;
+			top: -10px;
+			content: "q";
+			font-family: "PantonIcons-DLight"; 
+			font-size: 24px;
+			font-weight: normal;
+		}
+		&:not([class*="collapsed"]) {
+			&:after {
+				content: "r";	
+			}	
+		}
+	}
+	
+}
+// ####################################################################################################
+//
+// icons
+//
+// ####################################################################################################
+.rdcons {
+	font-family: "PantonIcons-BLight";	
+	font-size: 2em;
+	line-height: 1.5em;
+	text-transform: none;
+	font-weight: normal !important;
+	&.rdbtn {
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		margin-right: 5px;
+	}
+	&.rdcirc {
+		position: relative;
+		border: 2px solid #fff;
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+		text-align: center;
+		border-radius: 100%;
+		font-size: 1.5em;	
+		line-height: 38px;
+		top: 4px;
+		margin-right: 5px;
+		font-weight: bold !important;
+		
+	}
+	&.lg {
+		font-size: 4.5em;
+	}
+	&.alt.a {
+		font-family: "PantonIcons-ALight";
+	}
+	&.alt.b {
+		font-family: "PantonIcons-BLight";
+	}
+	&.alt.c {
+		font-family: "PantonIcons-CLight";
+	}
+	&.alt.d {
+		font-family: "PantonIcons-DLight";
+	}
+}
+.icon-block {
+	height: 75px;
+	@include breakpoint ($screen-sm) {
+		height: 144px
+	}
+	svg {
+		height: 75px;
+		@include breakpoint ($screen-sm) {
+			height: 144px
+		}
+		width: auto;	
+		fill: $black;
+		* {
+			fill: $black;
+		}
+	}	
+	&.alt {
+		height: auto;
+		svg {
+			height: auto;	
+		}
+			
+	}
+}
+
+.list-group {
+	.rdcons {
+		margin-left: -12px;
+		margin-right: 12px;	
+	}	
+}
+// ####################################################################################################
+//
+// jesse
+//
+// ####################################################################################################
+
+article a {
+	text-decoration: underline;	
+	color: $green;
+}
+.graph {
+	position: relative;
+	height: ($spacer * 3) + 1px;
+	margin-bottom: 1em;
+	.bar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: $spacer * 1.5;
+		background: lighten($green, 15%) url("/assets/svg/dust.01.svg") repeat center bottom;
+		width: 90%;	
+		&:after {
+			@extend %full-coverage;
+			content: "";
+			width: 80%;
+			background: $green;	
+		}
+		&:last-child {
+			top: ($spacer * 1.5) + 1px;
+			width: 80%;
+			background-color: lighten($blue, 15%);
+			&:after {
+				width: 50%;
+				background: $blue;	
+			}
+		}
+	}	
+}
+.highlight {
+	.rdcons {
+		position: relative;
+		width: 100px;
+		margin: 0 auto;
+		text-align:center;
+		&:after {
+			position: absolute;
+			top: 30px;
+			left: -22px;
+			content: "";
+			width: 44px;
+			height: 2px;
+			background: $black;
+			display: block;
+			
+		}
+		&:before {
+			position: absolute;
+			top: 30px;
+			right: -22px;
+			content: "";
+			width: 44px;
+			height: 2px;
+			background: $black;
+			display: block;
+			
+		}
+	}
+}
+.billboard {
+	background: $brand-primary;
+	position: relative;
+	height: 480px;
+	margin-bottom: $spacer;
+	.wrapper {
+		@extend %full-coverage;
+		z-index: 1;
+		display: table;
+		text-align: center;
+		.content {
+/*
+			position: relative;
+			width: 100%;
+			display: table-cell;
+			vertical-align: middle;	
+*/
+			position: absolute;
+			background: rgba($green_dark, 0.75);
+			padding: $spacer;
+			width: 34%;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			color: #fff;
+			text-align: left;
+		}
+	}	
+	
+}
+.banner {
+	background: $green_dark url("/assets/svg/dust.01.svg") repeat center bottom;
+	color: #FFF;
+	.container {
+		padding-bottom: 1em;	
+	}
+}
+main > footer, .banner {
+	p {
+		a {
+			color: #fff;
+			text-decoration: underline;
+		}	
+	}	
+}
+// ####################################################################################################
+//
+// RD specific (multi site)
+//
+// ####################################################################################################
+body.rd {
+	.navbar-default {
+		
+		background: $green_dark;
+		@include breakpoint ($screen-md) {
+			&:after {
+				background-image: url("/assets/svg/bg.08.svg");
+			}
+		}
+		@media (max-width: $screen-md){
+			.navbar-brand {
+				padding: 0;
+				> img {
+					min-width: 0 !important;
+					width: 43px !important;
+					height: 40px !important;
+
+				}
+			}
+		}
+	}
+	.navbar-nav:last-child {
+		@include breakpoint($screen-md) {
+			//background: $black;
+		}
+	}
+	.bg {
+
+		&.hero {
+			// top: 154px; 
+		}
+	}
+	.tool-bar {	
+		> .btn, .btn-group {
+			border-left: 1px solid $green_dark !important;
+			&:first-child {
+				border-left: 0px !important;	
+			}	
+		}
+	}
+
+}
+// ####################################################################################################
+//
+// TYPED
+//
+// ####################################################################################################
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+// ####################################################################################################
+//
+// ANIMATIONS
+//
+// ####################################################################################################
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@include keyframes(pulse) {
+	0% {
+		background-color: $green_dark !important;		
+	}
+	5% {
+		background-color: darken($green_dark, 5%) !important;	
+	}
+	10% {
+		background-color: darken($green_dark, 15%) !important;		
+	}
+	15% {
+		background-color: darken($green_dark, 5%) !important;	
+	}
+	20% {
+		background-color: darken($green_dark, 15%) !important;		
+	}
+	25% {
+		background-color: $green_dark !important;		
+	}
+	100% {
+		background-color: $green_dark !important;		
+	}
+}

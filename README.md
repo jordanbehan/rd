@@ -1,2 +1,1 @@
-# rd
-Design documentation and prototype
+# This is my README
