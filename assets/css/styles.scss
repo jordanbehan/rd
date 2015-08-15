@@ -59,10 +59,10 @@
 
 // EUX overrides
 //@import "eux/eux-kit";
-//@import "eux/scaffolding";
-//@import "eux/type";
-//@import "eux/navbar";
-//@import "eux/modals";
+@import "eux/scaffolding";
+@import "eux/type";
+@import "eux/navbar";
+@import "eux/modals";
 // always last
-//@import "eux/custom";
+@import "eux/custom";
 
