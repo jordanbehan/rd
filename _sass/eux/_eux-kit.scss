@@ -50,7 +50,7 @@ $spacer : 44px;
 	background-size: cover;		
 	//overflow: hidden;
 	text-align: center;
-	@include intrinsic-ratio($ratio, $width);
+	//@include intrinsic-ratio($ratio, $width);
 	.wrapper {
 		// centering in the unknown (css-tricks.com)
 		position:absolute;
