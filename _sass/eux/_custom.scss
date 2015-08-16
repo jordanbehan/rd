@@ -31,7 +31,7 @@ article {
 		max-width: 100%;
 		width: 100%;	
 	}	
-	background: url("/assets/svg/skyline.01.svg") repeat-x bottom center;
+	background: url("../svg/skyline.01.svg") repeat-x bottom center;
 	background-size: 1800px;
 	padding-bottom: $spacer*5;
 	.truck {
@@ -110,7 +110,7 @@ section.feature {
 	&:before {
 		content: "";
 		position: absolute;
-		background: url("/assets/svg/bg.01.svg") no-repeat center top;
+		background: url("../svg/bg.01.svg") no-repeat center top;
 		background-size: 200%;
 		display: block;
 		bottom: -20px;
@@ -121,7 +121,7 @@ section.feature {
 	&:after {
 		content: "";
 		position: absolute;
-		background: #fff url("/assets/svg/bg.05.svg") no-repeat 50% -5%;
+		background: #fff url("../svg/bg.05.svg") no-repeat 50% -5%;
 		background-size: 110%;
 		display: block;
 		top: -15px;
@@ -135,7 +135,7 @@ main > footer {
 	z-index: 2;
 	margin-top: 0.5em;
 	padding-top: 4em !important;
-	background: $black url("/assets/images/bg.05.jpg") no-repeat center center;
+	background: $black url("../images/bg.05.jpg") no-repeat center center;
 	background-size: cover;
 	font-weight: 600;
 	a:not([class*="btn"]) {
@@ -169,7 +169,7 @@ main > footer {
 		content: "";
 		position: absolute;
 		z-index: 3;
-		//background: url("/assets/svg/bg.02.svg") no-repeat left top;
+		//background: url("../svg/bg.02.svg") no-repeat left top;
 		background-size: 200%;
 		display: block;
 		top: -2px;
@@ -266,7 +266,7 @@ main > footer {
 			}
 			&:before {
 				
-				background: url("/assets/svg/bg.07.svg") no-repeat 50% 520px;
+				background: url("../svg/bg.07.svg") no-repeat 50% 520px;
 				background-size: 105%;
 				bottom: -1px;
 				top: 0;
@@ -280,7 +280,7 @@ main > footer {
 				}
 				position: absolute;
 				z-index: 99999;
-				background: url("/assets/svg/bg.07.svg") no-repeat 50% 260px;
+				background: url("../svg/bg.07.svg") no-repeat 50% 260px;
 				background-size: 105%;
 				display: block;
 				bottom: -1px;
@@ -338,7 +338,7 @@ main > footer {
 			width: 100%;
 			height: 122px;
 			content: "";
-			background: url("/assets/svg/bg.03.svg") no-repeat 50% 105%;
+			background: url("../svg/bg.03.svg") no-repeat 50% 105%;
 			background-size: 110%;
 			overflow: hidden;
 		}
@@ -571,7 +571,7 @@ article a {
 		top: 0;
 		left: 0;
 		height: $spacer * 1.5;
-		background: lighten($green, 15%) url("/assets/svg/dust.01.svg") repeat center bottom;
+		background: lighten($green, 15%) url("../svg/dust.01.svg") repeat center bottom;
 		width: 90%;	
 		&:after {
 			@extend %full-coverage;
@@ -651,7 +651,7 @@ article a {
 	
 }
 .banner {
-	background: $green_dark url("/assets/svg/dust.01.svg") repeat center bottom;
+	background: $green_dark url("../svg/dust.01.svg") repeat center bottom;
 	color: #FFF;
 	.container {
 		padding-bottom: 1em;	
@@ -676,7 +676,7 @@ body.rd {
 		background: $green_dark;
 		@media (min-width: $screen-md) {
 			&:after {
-				background-image: url("/assets/svg/bg.08.svg");
+				background-image: url("../svg/bg.08.svg");
 			}
 		}
 		@media (max-width: $screen-md){
