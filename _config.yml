@@ -1,0 +1,3 @@
+source: ./
+destination: ./build.rd/rd
+baseurl: /rd

@@ -32,6 +32,7 @@
 @import url("//hello.myfonts.net/count/2e2d4b");
 
   
+/*
 @font-face {font-family: 'PantonIcons-ALight';src: url('webfonts/2E2D4B_0_0.eot');src: url('webfonts/2E2D4B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E2D4B_0_0.woff2') format('woff2'),url('webfonts/2E2D4B_0_0.woff') format('woff'),url('webfonts/2E2D4B_0_0.ttf') format('truetype');}
  
   
@@ -40,6 +41,7 @@
   
 @font-face {font-family: 'PantonIcons-CLight';src: url('webfonts/2E2D4B_2_0.eot');src: url('webfonts/2E2D4B_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E2D4B_2_0.woff2') format('woff2'),url('webfonts/2E2D4B_2_0.woff') format('woff'),url('webfonts/2E2D4B_2_0.ttf') format('truetype');}
  
+*/
   
 @font-face {font-family: 'PantonIcons-DLight';src: url('webfonts/2E2D4B_3_0.eot');src: url('webfonts/2E2D4B_3_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E2D4B_3_0.woff2') format('woff2'),url('webfonts/2E2D4B_3_0.woff') format('woff'),url('webfonts/2E2D4B_3_0.ttf') format('truetype');}
  

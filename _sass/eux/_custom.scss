@@ -24,6 +24,9 @@ article {
 	position: relative;
 	overflow: hidden;
 	width: 100%;
+	@media (min-width: $screen-md) {
+    	margin-top: 100px; 
+	}
 	img {
 		max-width: 100%;
 		width: 100%;	
@@ -56,12 +59,29 @@ article {
 		height: 100px;	
 	}
 }
+.bg + article {
+	margin-top: 0px; 
+}
 section {
 	position: relative;
 	padding: 1em 0 3em;
 
 }
-
+.sidebar {
+	margin-bottom: 44px;
+	margin-top: 44px;
+	@media (min-width: $screen-md) {
+		margin-top: 0px;
+	}
+	ul li {
+    	border-bottom: 1px dotted $green;
+    	a {
+			display: block;
+			padding: 11px 0;
+			text-decoration: none; 
+		}
+	}
+}
 .nav {
 	@extend %ui-basic;
 }
@@ -474,7 +494,7 @@ body{
 //
 // ####################################################################################################
 .rdcons {
-	font-family: "PantonIcons-BLight";	
+	font-family: "PantonIcons-DLight";
 	font-size: 2em;
 	line-height: 1.5em;
 	text-transform: none;
@@ -499,21 +519,6 @@ body{
 		margin-right: 5px;
 		font-weight: bold !important;
 		
-	}
-	&.lg {
-		font-size: 4.5em;
-	}
-	&.alt.a {
-		font-family: "PantonIcons-ALight";
-	}
-	&.alt.b {
-		font-family: "PantonIcons-BLight";
-	}
-	&.alt.c {
-		font-family: "PantonIcons-CLight";
-	}
-	&.alt.d {
-		font-family: "PantonIcons-DLight";
 	}
 }
 .icon-block {

@@ -1,17 +1,7 @@
-# Require any additional compass plugins here.
-require "toolkit"
-require "breakpoint"
-#require "singularitygs"
-#require "sassy-buttons"
-require "color-schemer"
-require "modular-scale"
-require "stitch"
-require "animation"
-
 # Set this to the root of your project when deployed:
 http_path = "/"
-css_dir = "src/assets/css"
-sass_dir = "src/assets/_scss"
+css_dir = "assets/css"
+sass_dir = "assets/css"
 images_dir = "assets/images"
 javascripts_dir = "assets/js"
 fonts_dir = "fonts"

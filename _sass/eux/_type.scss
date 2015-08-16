@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6,
 
 h1, .h1 { 
 	font-size: em(36px);
-	//@include rhythm(0.5,0,0,0.25);
+	@include rhythm(0.5,0,0,1);
 	font-weight: 300;
 	span {
 		font-size: 18px;
@@ -41,7 +41,7 @@ h1, .h1 {
 h2, .h2 {
 	font-weight: 700;
 	font-size: em(36px);
-	//@include rhythm(0,0,0,0.65);
+	@include rhythm(0,0,0,0.65);
 	span {
 		font-size: 18px;
 		text-transform: uppercase;	
@@ -49,11 +49,12 @@ h2, .h2 {
 	}
 }
 hr + h2 {
-	//@include rhythm(1,0,0,0.65);	
+	@include rhythm(1,0,0,0.65);	
 }
 h3, .h3 { 
 	font-size: em(28px);
 	font-weight: 300;
+	@include rhythm(0.75,0,0,0.5);
 	span {
 		font-size: 18px;
 		text-transform: uppercase;	
@@ -66,18 +67,18 @@ h4, .h4 {
 	text-transform: uppercase;
 }
 h3 + h4 {
-	margin-top: -1em;
+	margin-top: -0.5em;
 }
 h5, .h5 { 
 	font-size: em(22px);
 	font-weight: 700;
-	//@include rhythm(0.2,0,0,0.4);
+	@include rhythm(0.2,0,0,0.4);
 }
 h6, .h6 {
 	font-size: em(16px);
 	font-weight: 600;
 	//text-transform: uppercase;
-	//@include rhythm(0.65,0,0,0.5);
+	@include rhythm(0.65,0,0,0.5);
 	a {
 		color: $blue;	
 	}
@@ -90,7 +91,7 @@ h6, .h6 {
 p {
 	font-size: 1em;
 	line-height: 1.5em;
-	//@include rhythm(0,0,0,1);
+	@include rhythm(0,0,0,1);
 
 }
 .list-group {
