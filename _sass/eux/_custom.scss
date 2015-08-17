@@ -590,73 +590,7 @@ article a {
 		}
 	}	
 }
-.highlight {
-	.rdcons {
-		position: relative;
-		width: 100px;
-		margin: 0 auto;
-		text-align:center;
-		&:after {
-			position: absolute;
-			top: 30px;
-			left: -22px;
-			content: "";
-			width: 44px;
-			height: 2px;
-			background: $black;
-			display: block;
-			
-		}
-		&:before {
-			position: absolute;
-			top: 30px;
-			right: -22px;
-			content: "";
-			width: 44px;
-			height: 2px;
-			background: $black;
-			display: block;
-			
-		}
-	}
-}
-.billboard {
-	background: $brand-primary;
-	position: relative;
-	height: 480px;
-	margin-bottom: $spacer;
-	.wrapper {
-		@extend %full-coverage;
-		z-index: 1;
-		display: table;
-		text-align: center;
-		.content {
-/*
-			position: relative;
-			width: 100%;
-			display: table-cell;
-			vertical-align: middle;	
-*/
-			position: absolute;
-			background: rgba($green_dark, 0.75);
-			padding: $spacer;
-			width: 34%;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			color: #fff;
-			text-align: left;
-		}
-	}	
-	
-}
-.banner {
-	background: $green_dark url("../svg/dust.01.svg") repeat center bottom;
-	color: #FFF;
-	.container {
-		padding-bottom: 1em;	
-	}
-}
+
 main > footer, .banner {
 	p {
 		a {
