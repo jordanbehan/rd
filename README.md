@@ -2,3 +2,6 @@
 ## Web re-design Spring/Summer 2015
 
 jesse@ethicalux.com
+
+Jekyll hints:
+jekyll serve --watch --baseurl=
