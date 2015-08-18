@@ -10,7 +10,7 @@ $spacer : 44px;
 
 	// quick & dirty px's to em's
 	@function em($target, $context: $font-size-base) {
-	   @if $target == 0 { @return 0 }
+	   @if $target == 0 { @return 0px }
 	   @return $target / $context + 0em;
 	}
 	
@@ -40,7 +40,20 @@ $spacer : 44px;
 		width: 100%;
 		height: 100%;
 	}
+	@mixin fluid-aspect($ratio: 1 1, $selector: "> :first-child") {
+		$selector: unquote($selector);
 	
+		padding-bottom: percentage(nth($ratio, 2) / nth($ratio, 1));
+		position: relative;
+	
+		#{$selector} {
+			left: 0;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			width: 100%;
+		}
+	}
 	@mixin panel($ratio:1, $width:100%) {
 		position: relative;
 		background-position: 50% 50%;

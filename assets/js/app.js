@@ -124,30 +124,43 @@ var App = (function ($) {
     jk.vars = {
     };
     jk.init = function () {
-		jk.window();
-		jk.ui.toggle();
+		//jk.window();
+		jk.estimator.init();
 		
     };
     jk.window = function () {
     	var $window = $(window);
     	if ($("html, body").hasClass("no-touch")) {
+	    
 	    }
     	$window.scroll(function() {
 
 		});
     };
-  	jk.ui = {
-  		toggle : function () {
-	  		var _toggle = $(".jk_toggle");	  		
-	  		  		
-	  		_toggle.on("click", this, function(e) {
-	  			e.preventDefault();
-	  			var _target = $(this).data().target;
+  	jk.estimator = {
+  		init : function () {
+	  		var _this = $(".estimator"),
+	  			_thisMessage = $(".estimator .msg"),
+	  			_thisReveal = $(".estimator .reveal"),
+	  			_thisSlider = $(".estimator .slider"),
+	  			_thisBox = $(".estimator .box"),
+	  			_sliderVal = _thisSlider.val();
 	  			
-	  			$(this).toggleClass("on");
-	  			$(_target).toggleClass("on");
-	  		});
+	  			_thisReveal.css({"width" : _sliderVal + "%"});
+	  			_thisBox.css({"width" : _sliderVal-5 + "%"});
 	  		
+	  			_thisSlider.on("mousemove", this, function(){
+		  			_thisMessage.html($(this).val());	
+		  			_thisReveal.css({"width" : $(this).val() + "%"});
+		  			_thisBox.css({"width" : $(this).val()-5 + "%"});
+	  			})
+	  		
+	  		
+	  			_thisSlider.on("change", this, function(){
+		  			_thisMessage.html($(this).val());	
+		  			_thisReveal.css({"width" : $(this).val() + "%"});
+		  			_thisBox.css({"width" : $(this).val()-5 + "%"});
+	  			})	  		
   		}
   	};
 	jk.helpers = {
@@ -191,7 +204,7 @@ $(function () {
 	});
 */
 
-	
+	App.init();
 	ScrollFX.init();
 	
 });
