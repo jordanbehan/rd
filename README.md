@@ -3,7 +3,7 @@
 
 jesse@ethicalux.com
 
-
+LIVE SITE (preview changes): http://ethicalux.github.io/rd/
 
 ## Local Dev tips:
 
