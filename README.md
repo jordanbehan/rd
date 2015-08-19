@@ -3,5 +3,9 @@
 
 jesse@ethicalux.com
 
+
+
+## Local Dev tips:
+
 Jekyll hints:
 jekyll serve --watch --baseurl=
